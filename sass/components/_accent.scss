@@ -1,0 +1,66 @@
+.section-accent {
+  padding-top: 94px;
+  padding-bottom: 0;
+}
+
+.accent {
+  display: flex;
+  align-items: baseline;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.accent__item {
+  max-width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.accent__item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+$icons: "antenna", "clock", "diagram", "astronaut";
+@each $iconName in $icons {
+  .accent__icon-#{$iconName}::before {
+    background-image: url(../images/icons/#{$iconName}.svg);
+  }
+}
+// .accent__icon-antenna::before {
+//   background-image: url(../images/icons/antenna.svg);
+// }
+
+// .accent__icon-clock::before {
+//   background-image: url(../images/icons/clock.svg);
+// }
+
+// .accent__icon-diagram::before {
+//   background-image: url(../images/icons/diagram.svg);
+// }
+
+// .accent__icon-astronaut::before {
+//   background-image: url(../images/icons/astronaut.svg);
+// }

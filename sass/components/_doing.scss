@@ -1,0 +1,25 @@
+.doing__item {
+  --grid-item: 3;
+  position: relative;
+}
+
+.doing__lable {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 70px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--dark-bg-text-color);
+}
