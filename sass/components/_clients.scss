@@ -1,11 +1,14 @@
-.clients-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+// .clients-icons {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-  &__item + &__item {
-    margin-left: 30px;
-  }
+//   &__item + &__item {
+//     margin-left: 30px;
+//   }
+// }
+.clients-icons__item {
+  --grid-item: 6;
 }
 
 .clients-icons__icon {

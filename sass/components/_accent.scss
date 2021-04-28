@@ -4,8 +4,8 @@
 }
 
 .accent {
-  display: flex;
-  align-items: baseline;
+  // display: flex;
+  // align-items: baseline;
 
   &__title {
     margin-top: 0;
@@ -24,11 +24,12 @@
 }
 
 .accent__item {
-  max-width: 270px;
+  --grid-item: 4;
+  // max-width: 270px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }
 
 .accent__item::before {
