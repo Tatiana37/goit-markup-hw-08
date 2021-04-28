@@ -317,11 +317,6 @@ a:hover, a:focus {
   padding-bottom: 0;
 }
 
-.accent {
-  display: flex;
-  align-items: baseline;
-}
-
 .accent__title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -338,11 +333,7 @@ a:hover, a:focus {
 }
 
 .accent__item {
-  max-width: 270px;
-}
-
-.accent__item:not(:last-child) {
-  margin-right: 30px;
+  --grid-item: 4;
 }
 
 .accent__item::before {
@@ -420,14 +411,8 @@ a:hover, a:focus {
   line-height: 1.18;
 }
 
-.clients-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.clients-icons__item + .clients-icons__item {
-  margin-left: 30px;
+.clients-icons__item {
+  --grid-item: 6;
 }
 
 .clients-icons__icon {
