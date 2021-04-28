@@ -72,11 +72,29 @@ a:hover, a:focus {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1190.98px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .grid {
@@ -90,6 +108,7 @@ a:hover, a:focus {
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   margin-left: 30px;
   margin-top: 30px;
+  background-color: grey;
 }
 
 .block {
@@ -263,25 +282,51 @@ a:hover, a:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imgbg.jpg);
-  min-height: 600px;
   background-color: var(--dark-bg-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
-  width: 696px;
+  width: 100%;
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-style: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dark-bg-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 696px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {
@@ -317,23 +362,42 @@ a:hover, a:focus {
   padding-bottom: 0;
 }
 
+.accent__item {
+  --grid-item: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .accent__item {
+    --grid-item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .accent__item {
+    --grid-item: 4;
+  }
+}
+
 .accent__title {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.4;
+  text-align: center;
   text-transform: uppercase;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .accent__title {
+    text-align: left;
+  }
 }
 
 .accent__paragraph {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.accent__item {
-  --grid-item: 4;
 }
 
 .accent__item::before {
