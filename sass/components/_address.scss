@@ -1,18 +1,29 @@
-.web {
+.footer-logo__link {
+  display: inline-block;
+}
+
+.web,
+.studio {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.9;
+  // font-size: 26px;
+  // line-height: 1.9;
+  font-size: 24px;
+  line-height: 1.16;
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.9;
+  }
+}
+
+.web {
   color: var(--accent-color);
 }
 
 .studio {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.9;
   color: var(--dark-bg-text-color);
-  text-decoration: none;
 }
 
 .address {
@@ -20,7 +31,7 @@
   margin-top: 20px;
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 }
 .address__link {

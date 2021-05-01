@@ -108,7 +108,6 @@ a:hover, a:focus {
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   margin-left: 30px;
   margin-top: 30px;
-  background-color: grey;
 }
 
 .block {
@@ -120,10 +119,17 @@ a:hover, a:focus {
   margin-top: 0;
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.7;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .block__title {
+    font-size: 36px;
+    line-height: 1.7;
+  }
 }
 
 .social-list {
@@ -285,12 +291,14 @@ a:hover, a:focus {
   background-color: var(--dark-bg-color);
   padding-top: 118px;
   padding-bottom: 118px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    height: 600px;
   }
 }
 
@@ -301,7 +309,7 @@ a:hover, a:focus {
   margin-left: auto;
   margin-bottom: 30px;
   font-weight: 900;
-  font-style: 26px;
+  font-size: 26px;
   line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
@@ -311,13 +319,7 @@ a:hover, a:focus {
 
 @media screen and (min-width: 480px) {
   .hero__title {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero__title {
-    width: 696px;
+    width: 360px;
   }
 }
 
@@ -428,6 +430,16 @@ a:hover, a:focus {
   background-image: url(../images/icons/astronaut.svg);
 }
 
+.doing-section {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .doing-section {
+    display: block;
+  }
+}
+
 .doing__item {
   --grid-item: 3;
   position: relative;
@@ -476,7 +488,19 @@ a:hover, a:focus {
 }
 
 .clients-icons__item {
-  --grid-item: 6;
+  --grid-item: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-icons__item {
+    --grid-item: 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-icons__item {
+    --grid-item: 6;
+  }
 }
 
 .clients-icons__icon {
@@ -492,8 +516,8 @@ a:hover, a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 90px;
+  width: 100%;
+  min-height: 92px;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
   fill: var(--icons-color);
@@ -611,21 +635,33 @@ a:hover, a:focus {
   color: var(--main-text-color);
 }
 
-.web {
+.footer-logo__link {
+  display: inline-block;
+}
+
+.web,
+.studio {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.9;
+  font-size: 24px;
+  line-height: 1.16;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .web,
+  .studio {
+    font-size: 26px;
+    line-height: 1.9;
+  }
+}
+
+.web {
   color: var(--accent-color);
 }
 
 .studio {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.9;
   color: var(--dark-bg-text-color);
-  text-decoration: none;
 }
 
 .address {
@@ -634,7 +670,7 @@ a:hover, a:focus {
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .address__link {
@@ -647,16 +683,18 @@ a:hover, a:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  .subscribe__form {
+    display: inline-flex;
+  }
 }
 
 .subscribe__input {
-  width: 360px;
+  width: 100%;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -681,14 +719,29 @@ a:hover, a:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 560px) and (max-width: 1199.98px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+  }
+}
+
 .subscribe__button {
   display: flex;
   align-items: center;
   min-width: 200px;
+  height: 50px;
   padding-top: 10px;
   padding-right: 32px;
   padding-bottom: 10px;
   padding-left: 32px;
+  margin-right: auto;
+  margin-left: auto;
   border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 700;
@@ -702,11 +755,17 @@ a:hover, a:focus {
   transition: background-color var(--animation);
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe__button {
+    margin: 0 0 0 12px;
+  }
+}
+
 .subscribe__button:hover, .subscribe__button:focus {
   background-color: #188ce8;
 }
 
-.subscribe__button .subscribe__icon {
+.subscribe__icon {
   fill: var(--dark-bg-text-color);
   margin-left: 10px;
 }
@@ -943,8 +1002,20 @@ a:hover, a:focus {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  --grid-item: 4;
+  --grid-item: 1;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    --grid-item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    --grid-item: 4;
+  }
 }
 
 .footer {
@@ -953,9 +1024,20 @@ a:hover, a:focus {
   background-color: var(--dark-bg-color);
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
 }
 
 .footer__title {
@@ -969,11 +1051,42 @@ a:hover, a:focus {
 
 .container__one,
 .container__two {
-  margin-right: 30px;
-  flex-basis: calc((50% - 45px) / 2);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .container__one,
+  .container__two {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container__one,
+  .container__two {
+    margin-right: 30px;
+    flex-basis: calc((50% - 45px) / 2);
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 
 .container__three {
-  flex-basis: calc(50% - 15px);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .container__three {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container__three {
+    flex-basis: calc(50% - 15px);
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */

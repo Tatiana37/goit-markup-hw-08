@@ -17,10 +17,12 @@
   // padding-bottom: 200px;
   padding-top: 118px;
   padding-bottom: 118px;
+  text-align: center;
 
   @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
+    height: 600px;
   }
 }
 
@@ -34,7 +36,7 @@
   font-weight: 900;
   // font-size: 44px;
   // line-height: 1.36;
-  font-style: 26px;
+  font-size: 26px;
   line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
@@ -42,11 +44,9 @@
   color: var(--dark-bg-text-color);
 
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: 360px;
   }
-  @media screen and (min-width: 768px) {
-    width: 696px;
-  }
+
   @media screen and (min-width: 1200px) {
     width: 696px;
     font-size: 44px;

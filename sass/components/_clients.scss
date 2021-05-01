@@ -8,7 +8,14 @@
 //   }
 // }
 .clients-icons__item {
-  --grid-item: 6;
+  --grid-item: 2;
+
+  @media screen and (min-width: 768px) {
+    --grid-item: 3;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid-item: 6;
+  }
 }
 
 .clients-icons__icon {
@@ -24,8 +31,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 90px;
+  width: 100%;
+  min-height: 92px;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
   fill: var(--icons-color);
