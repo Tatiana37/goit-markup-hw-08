@@ -2,7 +2,7 @@
   position: relative;
   //   top: 0;
   //   right: 0;
-  z-index: 1;
+  z-index: 50;
   min-width: 40px;
   min-height: 40px;
   background-color: transparent;
@@ -40,7 +40,7 @@
   position: fixed;
   top: -100%;
   left: 0;
-  //   z-index: 15;
+  z-index: 45;
   width: 100%;
   //   max-width: 480px;
   height: 100vh;
