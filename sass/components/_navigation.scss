@@ -39,3 +39,9 @@
   background: #2196f3;
   border-radius: 2px;
 }
+
+@media screen and (max-width: 767.98px) {
+  .menu--desctop {
+    display: none;
+  }
+}

@@ -186,8 +186,8 @@ a:hover, a:focus {
 .logo__item {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .logo__item--first {
@@ -195,8 +195,21 @@ a:hover, a:focus {
 }
 
 .logo__item--second {
-  margin-right: 90px;
+  margin-right: 88px;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 1199.98px) {
+  .logo__item--second {
+    margin-right: 93px;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .logo__item {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .menu {
@@ -241,27 +254,55 @@ a:hover, a:focus {
   border-radius: 2px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .menu--desctop {
+    display: none;
+  }
+}
+
 .contacts {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
+  flex-direction: column;
 }
 
 .contacts__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1199.98px) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: inherit;
+}
+
+@media screen and (min-width: 1199.98px) {
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__icon {
@@ -273,6 +314,12 @@ a:hover, a:focus {
 .contacts__link:hover .contacts__icon,
 .contacts__link:focus .contacts__icon {
   fill: var(--accent-color);
+}
+
+@media screen and (max-width: 767.98px) {
+  .contacts--wrap {
+    display: none;
+  }
 }
 
 .hero {
@@ -980,6 +1027,133 @@ a:hover, a:focus {
   background-color: #188ce8;
 }
 
+.menu-btn {
+  position: relative;
+  z-index: 1;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 767.98px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.icon-menu-close {
+  display: none;
+}
+
+.is-open .icon-menu-close {
+  display: block;
+}
+
+.is-open .icon-menu {
+  display: none;
+}
+
+.menu-btn__icon {
+  transition: fill var(--animation);
+}
+
+.menu-btn:hover .menu-btn__icon,
+.menu-btn:focus .menu-btn__icon {
+  fill: var(--accent-color);
+}
+
+.mob-menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: #fff;
+  transition: top var(--animation);
+}
+
+.mob-menu.is-open {
+  top: 0;
+}
+
+.mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+
+.mob-menu__item:hover .mob-menu__link,
+.mob-menu__item:focus .mob-menu__link {
+  color: var(--accent-color);
+}
+
+.mob-menu__link--current {
+  color: var(--accent-color);
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__link--tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-contacts__link--mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: inherit;
+}
+
+.mob-contacts__item:first-child {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__item:nth-child(2) {
+  margin-bottom: 64px;
+}
+
+.mob-socials__list {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mob-socials__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-socials__item:not(:last-child)::after {
+  content: " ";
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .header {
   border-bottom: #ececec solid 1px;
 }
@@ -987,6 +1161,7 @@ a:hover, a:focus {
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .block--bgcolor {

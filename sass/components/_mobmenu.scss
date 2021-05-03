@@ -1,0 +1,133 @@
+.menu-btn {
+  position: relative;
+  //   top: 0;
+  //   right: 0;
+  z-index: 1;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: 767.98px) {
+    display: none;
+  }
+}
+
+.icon-menu-close {
+  display: none;
+}
+
+.is-open {
+  .icon-menu-close {
+    display: block;
+  }
+  .icon-menu {
+    display: none;
+  }
+}
+
+.menu-btn__icon {
+  transition: fill var(--animation);
+
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  //   z-index: 15;
+  width: 100%;
+  //   max-width: 480px;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: #fff;
+
+  transition: top var(--animation);
+
+  &.is-open {
+    top: 0;
+  }
+
+  //   @media screen and (min-width: 767.98px) {
+  //     display: none;
+  //   }
+}
+
+.mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+
+.mob-menu__item:hover .mob-menu__link,
+.mob-menu__item:focus .mob-menu__link {
+  color: var(--accent-color);
+}
+
+.mob-menu__link--current {
+  color: var(--accent-color);
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__link--tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-contacts__link--mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: inherit;
+}
+
+.mob-contacts__item:first-child {
+  margin-bottom: 32px;
+}
+.mob-contacts__item:nth-child(2) {
+  margin-bottom: 64px;
+}
+
+.mob-socials__list {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mob-socials__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-socials__item:not(:last-child)::after {
+  content: " ";
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-right: 10px;
+  margin-left: 10px;
+}
