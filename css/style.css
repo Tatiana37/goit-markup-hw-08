@@ -179,9 +179,6 @@ a:hover, a:focus {
 
 .logo__link {
   display: inline-block;
-}
-
-.logo__item {
   padding-top: 24px;
   padding-bottom: 26px;
   font-family: "Raleway";
@@ -192,9 +189,16 @@ a:hover, a:focus {
   color: var(--accent-color);
 }
 
+.logo__item {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+}
+
 .logo {
-  padding-top: 24px;
-  padding-bottom: 26px;
   margin-right: 90px;
   font-family: "Raleway";
   font-style: normal;
