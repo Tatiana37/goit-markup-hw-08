@@ -15,25 +15,23 @@
   // padding-top: 24px;
   // padding-bottom: 26px;
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-}
 
-.logo__item--first {
-  color: var(--accent-color);
-}
+  &--first {
+    color: var(--accent-color);
+  }
+  &--second {
+    // padding-top: 24px;
+    // padding-bottom: 26px;
 
-.logo__item--second {
-  // padding-top: 24px;
-  // padding-bottom: 26px;
-
-  // font-family: "Raleway";
-  // font-style: normal;
-  // font-weight: 700;
-  // font-size: 26px;
-  // line-height: 1.19;
-  margin-right: 90px;
-  color: var(--title-color);
+    // font-family: "Raleway";
+    // font-style: normal;
+    // font-weight: 700;
+    // font-size: 26px;
+    // line-height: 1.19;
+    margin-right: 90px;
+    color: var(--title-color);
+  }
 }
