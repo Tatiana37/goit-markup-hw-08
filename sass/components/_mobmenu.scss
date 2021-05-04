@@ -1,6 +1,6 @@
 .menu-btn {
-  display: block;
-  position: relative;
+  // display: block;
+  // position: relative;
   //   top: 0;
   //   right: 0;
   z-index: 50;
@@ -11,9 +11,19 @@
   cursor: pointer;
   fill: var(--title-color);
 
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
   @media screen and (min-width: 767.98px) {
     display: none;
   }
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  fill: var(--accent-color);
 }
 
 .icon-menu-close {
@@ -29,19 +39,22 @@
   }
 }
 
-@media screen and (max-width: 767.98px) {
-  .menu-btn__icon {
-    fill: var(--title-color);
-    transition: fill var(--animation);
+// @media screen and (max-width: 767.98px) {
+//   .menu-btn__icon {
+//     fill: var(--title-color);
+//     transition: fill var(--animation);
 
-    .menu-btn:hover &,
-    .menu-btn:focus & {
-      fill: var(--accent-color);
-    }
-  }
-}
+//     .menu-btn:hover &,
+//     .menu-btn:focus & {
+//       fill: var(--accent-color);
+//     }
+//   }
+// }
 
 .mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: -100%;
   left: 0;
@@ -60,16 +73,9 @@
     top: 0;
   }
 
-  //   @media screen and (min-width: 767.98px) {
-  //     display: none;
-  //   }
-}
-
-.mob-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  @media screen and (min-width: 767.98px) {
+    display: none;
+  }
 }
 
 .mob-menu__link {
@@ -124,10 +130,14 @@
 
 .mob-socials__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+
+  @media screen and (min-width: 380px) {
+    font-size: 18px;
+  }
 }
 
 .mob-socials__item:not(:last-child)::after {
