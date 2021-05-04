@@ -623,7 +623,19 @@ a:hover, a:focus {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
-  --grid-item: 3;
+  --grid-item: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .exampls__item {
+    --grid-item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .exampls__item {
+    --grid-item: 3;
+  }
 }
 
 .exampls__link {
