@@ -1146,7 +1146,7 @@ a:hover, a:focus {
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: -100%;
+  top: -120%;
   left: 0;
   z-index: 45;
   width: 100%;
@@ -1279,7 +1279,7 @@ a:hover, a:focus {
   width: 22px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
-  margin-right: 4px;
+  margin-right: 8px;
   margin-left: 4px;
 }
 
