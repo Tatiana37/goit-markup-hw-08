@@ -626,13 +626,13 @@ a:hover, a:focus {
   --grid-item: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .exampls__item {
     --grid-item: 2;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .exampls__item {
     --grid-item: 3;
   }
@@ -660,14 +660,27 @@ a:hover, a:focus {
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 77px 24px;
   transition: transform var(--animation), background-color var(--animation);
   transform: translateY(101%);
+}
+
+@media screen and (min-width: 767.98px) {
+  .overlay {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .overlay {
+    padding: 63px 24px;
+  }
 }
 
 .overlay__text {
   font-size: 18px;
   line-height: 1.55;
-  width: 322px;
+  width: 100%;
   margin-bottom: 0;
   color: var(--dark-bg-text-color);
 }
