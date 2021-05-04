@@ -988,6 +988,8 @@ a:hover, a:focus {
   height: 15px;
   margin-right: 4px;
   border: 1px solid var(--title-color);
+  border-bottom: 2px solid var(--title-color);
+  border-right: 2px solid var(--title-color);
   border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
