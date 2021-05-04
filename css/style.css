@@ -1169,11 +1169,17 @@ a:hover, a:focus {
 
 .mob-menu__link {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 380px) {
+  .mob-menu__link {
+    font-size: 40px;
+  }
 }
 
 .mob-menu__item:hover .mob-menu__link,
@@ -1186,31 +1192,61 @@ a:hover, a:focus {
 }
 
 .mob-menu__item:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 380px) {
+  .mob-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .mob-contacts__link--tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 27px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 380px) {
+  .mob-contacts__link--tel {
+    font-size: 34px;
+  }
+}
+
 .mob-contacts__link--mail {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: inherit;
 }
 
+@media screen and (min-width: 380px) {
+  .mob-contacts__link--mail {
+    font-size: 24px;
+  }
+}
+
 .mob-contacts__item:first-child {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 380px) {
+  .mob-contacts__item:first-child {
+    margin-bottom: 32px;
+  }
 }
 
 .mob-contacts__item:nth-child(2) {
-  margin-bottom: 64px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 380px) {
+  .mob-contacts__item:nth-child(2) {
+    margin-bottom: 64px;
+  }
 }
 
 .mob-socials__list {
@@ -1220,7 +1256,7 @@ a:hover, a:focus {
 
 .mob-socials__link {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
@@ -1237,8 +1273,15 @@ a:hover, a:focus {
   width: 22px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+@media screen and (min-width: 380px) {
+  .mob-socials__item:not(:last-child)::after {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 .header {
