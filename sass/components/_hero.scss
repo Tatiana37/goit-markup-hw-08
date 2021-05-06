@@ -10,7 +10,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/imgbg.jpg);
+    url(../images/mobile/bg-mobile.jpg);
   // min-height: 600px;
   background-color: var(--dark-bg-color);
   // padding-top: 200px;
@@ -19,10 +19,62 @@
   padding-bottom: 118px;
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to left,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile/bg@2x-mobile.jpg);
+  }
+
+  @media screen and (min-width: 480px) {
+    background-image: linear-gradient(
+        to left,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet/bg-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to left,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/tablet/bg@2x-tablet.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
+
+    background-image: linear-gradient(
+        to left,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop/bg-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to left,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/desktop/bg@2x-desktop.jpg);
+    }
   }
 }
 
@@ -47,7 +99,7 @@
     width: 360px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199.98px) {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;

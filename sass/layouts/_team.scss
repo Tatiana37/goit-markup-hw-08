@@ -10,10 +10,10 @@
   --grid-item: 1;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767.98px) {
     --grid-item: 2;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199.98px) {
     --grid-item: 4;
   }
 }

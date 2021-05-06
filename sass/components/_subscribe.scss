@@ -1,5 +1,5 @@
 .subscribe__form {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199.98px) {
     display: inline-flex;
   }
 }
@@ -37,7 +37,7 @@
   @media screen and (min-width: 560px) and (max-width: 1199.98px) {
     width: 450px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199.98px) {
     width: 358px;
   }
 }
@@ -67,7 +67,7 @@
 
   transition: background-color var(--animation);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1199.98px) {
     margin: 0 0 0 12px;
   }
 
